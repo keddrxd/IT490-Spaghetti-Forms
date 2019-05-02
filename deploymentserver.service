@@ -1,0 +1,16 @@
+[Unit]
+Description=Deployment Server Script
+After=network.target
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=1
+User=adam
+ExecStart=/usr/bin/env php /home/adam/git/IT490Spaghetti/deployment/deploymentServer.php
+
+[Install]
+WantedBy=multi-user.target
+
+
