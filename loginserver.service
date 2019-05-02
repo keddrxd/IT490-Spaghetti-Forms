@@ -1,0 +1,14 @@
+[Unit]
+Description=Login server Script
+After=network.target
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=1
+User=andrew
+ExecStart=/usr/bin/env php /home/andrew/git/IT490Spaghetti/backend/server.php
+
+[Install]
+WantedBy=multi-user.target
